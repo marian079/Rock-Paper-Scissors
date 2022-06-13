@@ -82,14 +82,14 @@ function computerPlay() {
     {
             for(let i = 1; i <= 5; ++i)
         {   computer_score = 0, user_score = 0;
-            playerSelection =  prompt('What you chose, a rock, a paper or scissors?');
+            playerSelection =  prompt('What you choose, a rock, a paper or scissors?');
             if(playerSelection === null || playerSelection == 'stop')
             break;
            console.log(playRound(playerSelection, computerSelection));   
          
             if(computer_score)
             final_score_computer++;
-            else 
+            else if(user_score)
                 final_score_user++;
         }
         if(final_score_computer > final_score_user)
